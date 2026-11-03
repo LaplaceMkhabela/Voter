@@ -54,7 +54,7 @@ function createTables() {
             CREATE TABLE IF NOT EXISTS voter(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 voter_ip TEXT NOT NULL,
-                voted BOOLEAN NOT NULL,
+                voted BOOLEAN NOT NULL
             )
         
         `, (err) => {
