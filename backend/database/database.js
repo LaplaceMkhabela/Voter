@@ -41,7 +41,7 @@ function createTables() {
                 FOREIGN KEY (poll_id) REFERENCES Polls(id) ON DELETE CASCADE
             )
         
-        `, () => {
+        `, (err) => {
         if (err) {
             console.error('Failed to create votes table: ', err.message)
         }
