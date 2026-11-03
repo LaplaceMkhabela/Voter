@@ -16,7 +16,7 @@ function createTables() {
     db.serialize(() => {
         db.run(`
                 CREATE TABLE IF NOT EXISTS Polls(
-                    id INTEGER PRIMARY KEY AUTO INCREMENT,
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
                     name TEXT NOT NULL,
                     options TEXT UNIQUE NOT NULL,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -34,7 +34,7 @@ function createTables() {
 
     db.run(`
             CREATE TABLE IF NOT EXISTS votes(
-                id INTEGER PRIMARY KEY AUTO INCREAMENT,
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 voter TEXT NOT NULL,
                 vote TEXT NOT NULL,
                 poll_id INTEGER,
@@ -52,7 +52,7 @@ function createTables() {
 
     db.run(`
             CREATE TABLE IF NOT EXISTS voter(
-                id INTEGER PRIMARY KEY AUTO INCREAMENT,
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 voter_ip TEXT NOT NULL,
                 voted BOOLEAN NOT NULL,
             )
