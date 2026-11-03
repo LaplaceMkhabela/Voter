@@ -57,7 +57,7 @@ function createTables() {
                 voted BOOLEAN NOT NULL,
             )
         
-        `, () => {
+        `, (err) => {
         if (err) {
             console.error('Failed to create voter table: ', err.message)
         }
